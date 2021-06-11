@@ -26,8 +26,8 @@ class OrganisationTransformer extends TransformerAbstract
     {
         return [
             'name' => $organisation->name,
-            'trial_ends_at' => $organisation->trial_end->timestamp,
-            'created_at' => $organisation->created_at->timestamp,
+            'trial_ends_at' => optional($organisation->trial_end)->timestamp,
+            'created_at' => optional($organisation->created_at)->timestamp,
         ];
     }
 

@@ -49,12 +49,18 @@ class OrganisationCreatedNotification extends Mailable
         ]);
     }
 
-    public function getOrganisation()
+    /**
+     * @return Organisation
+     */
+    public function getOrganisation(): Organisation
     {
         return $this->organisation;
     }
 
-    public function getUser()
+    /**
+     * @return User
+     */
+    public function getUser(): User
     {
         return $this->user;
     }
